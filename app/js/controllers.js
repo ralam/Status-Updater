@@ -26,6 +26,8 @@
       var status = {'name': $scope.$parent.profile.name, 'imgUrl': $scope.$parent.profile.imgUrl, 'body': content.body}
       $scope.statuses.unshift(status);
       $scope.status = null;
+      $scope.statusUpdate.$setPristine();
+      $scope.statusUpdate.$setUntouched();
     };
   });
 
