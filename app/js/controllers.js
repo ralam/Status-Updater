@@ -23,7 +23,7 @@
     ];
 
     $scope.updateStatus = function(content) {
-      var status = {'name': 'Jefferson', 'body': content.body}
+      var status = {'name': $scope.$parent.profile.name, 'imgUrl': $scope.$parent.profile.imgUrl, 'body': content.body}
       $scope.statuses.unshift(status);
       $scope.status = null;
     };
