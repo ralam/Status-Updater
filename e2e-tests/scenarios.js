@@ -29,14 +29,14 @@ describe('status updater app', function() {
         element(by.model('status.body')).sendKeys('');
         element(by.className('btn-default')).click();
         expect(element.all(by.className('status-body')).first().getText()).
-          toMatch('Done being Secretary of State.');
+          toMatch('I\'m done being Secretary of State.');
       });
 
       it('displays the status list after navigating to the friends tab and back', function () {
         element(by.id('friend-tab-link')).click();
         element(by.id('status-tab-link')).click();
         expect(element.all(by.className('status-body')).first().getText()).
-          toMatch('Done being Secretary of State.');
+          toMatch('I\'m done being Secretary of State.');
       });
     });
 

@@ -6,14 +6,19 @@
   statusAppControllers.controller('statusCtrl', function($scope) {
     $scope.statuses = [
       {'name': 'Madison',
-      'body': 'Done being Secretary of State.'},
+      'imgUrl': './assets/images/James-Madison-small.jpg',
+      'body': 'I\'m done being Secretary of State.'},
       {'name': 'Franklin',
-      'body': 'Out flying kites'},
+      'imgUrl': './assets/images/BenFranklin-small.jpg',
+      'body': 'Out flying kites.'},
       {'name': 'Franklin',
+      'imgUrl': './assets/images/BenFranklin-small.jpg',
       'body': 'Being president is too much work.'},
       {'name': 'Washington',
+      'imgUrl': './assets/images/George-Washington-small.jpg',
       'body': 'And the best.'},
       {'name': 'Washington',
+      'imgUrl': './assets/images/George-Washington-small.jpg',
       'body': 'The first.'}
     ];
 
@@ -24,11 +29,18 @@
     };
   });
 
+  statusAppControllers.controller('profileCtrl', function($scope) {
+    $scope.profile = {
+      'name': 'Jefferson',
+      'imgUrl': './assets/images/Thomas-Jefferson-small.jpg'
+    }
+  });
+
   statusAppControllers.controller('friendCtrl', function($scope) {
     $scope.friends = [
-      {'name': 'Washington'},
-      {'name': 'Madison'},
-      {'name': 'Franklin'}
+      {'name': 'Washington', 'imgUrl': './assets/images/George-Washington-small.jpg'},
+      {'name': 'Madison', 'imgUrl': './assets/images/James-Madison-small.jpg'},
+      {'name': 'Franklin', 'imgUrl': './assets/images/BenFranklin-small.jpg'}
     ];
   });
 

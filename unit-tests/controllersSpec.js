@@ -6,12 +6,12 @@ describe('statusAppControllers module', function() {
 
   describe('status controller', function(){
 
-    it('should create "status" model with three statuses', inject(function($controller) {
+    it('should create "status" model with five statuses', inject(function($controller) {
       //spec body
       var scope = {},
           ctrl = $controller('statusCtrl', {$scope: scope})
 
-      expect(scope.statuses.length).toBe(3);
+      expect(scope.statuses.length).toBe(5);
     }));
 
     it('should add a new status', inject(function($controller) {
@@ -22,7 +22,7 @@ describe('statusAppControllers module', function() {
 
       scope.updateStatus(newStatus)
 
-      expect(scope.statuses.length).toBe(4);
+      expect(scope.statuses.length).toBe(6);
       expect(scope.statuses[0]).toEqual(newStatus);
     }));
   });

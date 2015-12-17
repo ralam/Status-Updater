@@ -1,3 +1,7 @@
 input.ng-invalid.ng-dirty {
   border: 2px red solid;
 }
+
+.feed-img {
+  max-width: 50px;
+}

@@ -4,8 +4,6 @@
   // Declare app level module which depends on views, and components
   var statusApp = angular.module('statusApp', [
     'ngRoute',
-    // 'statusApp.status',
-    // 'statusApp.friends',
     'statusAppControllers'
   ])
 
@@ -31,6 +29,13 @@
     return {
       restrict: 'E',
       templateUrl: './templates/friends-list.html'
+    };
+  });
+
+  statusApp.directive('profile', function() {
+    return{
+      restrict: 'E',
+      templateUrl: './templates/profile.html'
     };
   });
 })();

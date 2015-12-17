@@ -1,4 +1,6 @@
-<div class="col-md-2"></div>
+<div class="col-md-2" ng-controller="profileCtrl">
+  <profile></profile>
+</div>
 <div class="col-md-8">
 <ul class="list-group">
   <li class="list-group-item">
@@ -15,6 +17,7 @@
   </form>
 </li>
   <li class="list-group-item" ng-repeat="status in statuses">
+    <img class="feed-img" ng-src="{{status.imgUrl}}"></img>
     <span>{{status.name}}:</span>
     <p class="status-body">{{status.body}}</p>
   </li>
