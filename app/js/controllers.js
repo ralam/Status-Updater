@@ -6,9 +6,13 @@
   statusAppControllers.controller('statusCtrl', function($scope) {
     $scope.statuses = [
       {'name': 'Madison',
-      'body': 'Done being Secretary of State'},
+      'body': 'Done being Secretary of State.'},
       {'name': 'Franklin',
       'body': 'Out flying kites'},
+      {'name': 'Franklin',
+      'body': 'Being president is too much work.'},
+      {'name': 'Washington',
+      'body': 'And the best.'},
       {'name': 'Washington',
       'body': 'The first.'}
     ];

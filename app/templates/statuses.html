@@ -9,14 +9,14 @@
           <input class="form-control" name="content" ng-model="status.body" type="text" placeholder="Update your status" required></input>
       </div>
       <div class="col-md-2">
-        <input type="submit"  class="btn btn-default"  value="Update" />
+        <input type="submit" class="btn btn-default" value="Update" />
       </div>
     </div>
   </form>
 </li>
   <li class="list-group-item" ng-repeat="status in statuses">
     <span>{{status.name}}:</span>
-    <p>{{status.body}}</p>
+    <p class="status-body">{{status.body}}</p>
   </li>
 </ul>
 </div>
