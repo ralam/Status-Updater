@@ -5,7 +5,7 @@
   var statusApp = angular.module('statusApp', [
     'ngRoute',
     'statusAppControllers'
-  ])
+  ]);
 
   statusApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/index'});

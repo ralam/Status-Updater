@@ -1,5 +1,5 @@
 # Status Updater
-Basic social media profile page built using AngularJS. To start the server locally, run
+Basic social media profile page built using AngularJS. To start the server locally, clone this repo and run
 ```
 npm install
 npm start

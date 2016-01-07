@@ -20,10 +20,23 @@ describe('statusAppControllers module', function() {
           ctrl = $controller('statusCtrl', {$scope: scope}),
           newStatus = {'name': 'Jefferson', 'body': 'I am the best.'}
 
-      scope.updateStatus(newStatus)
+      scope.$parent = {"profile": {
+        "name": "Jefferson",
+        "imgUrl": "test.jpg"
+      }};
+      scope.statusUpdate = {
+        $setPristine: function() {},
+        $setUntouched: function() {}
+      };
+      spyOn(scope.statusUpdate, '$setPristine');
+      spyOn(scope.statusUpdate, '$setUntouched');
+      scope.updateStatus(newStatus);
 
       expect(scope.statuses.length).toBe(6);
-      expect(scope.statuses[0]).toEqual(newStatus);
+      expect(scope.statusUpdate.$setPristine).toHaveBeenCalled();
+      expect(scope.statusUpdate.$setUntouched).toHaveBeenCalled();
+      expect(scope.statuses[0].name).toEqual(newStatus.name);
+      expect(scope.statuses[0].body).toEqual(newStatus.body);
     }));
   });
 
